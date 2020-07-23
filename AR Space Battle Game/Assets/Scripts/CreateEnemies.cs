@@ -9,12 +9,12 @@ public class CreateEnemies : MonoBehaviour
 
     float elapsedRespawnSeconds = 0;     //Time elapsed
 
-    //int enemies = 0;  //No of enemy ships to spawn
+    
 
     // Use this for initialization
     void Start()
     {
-        //CreateEnemies();
+        
     }
 
     // Update is called once per frame
@@ -27,13 +27,12 @@ public class CreateEnemies : MonoBehaviour
             //Reset the timer 
             //And spawn enemy ships
             elapsedRespawnSeconds = 0;
-           
-            
+                      
             if(GameObject.FindGameObjectsWithTag("Player").Length==0)
             {
                 for(int i=0; i<5; i++)   //To spawn 5 enemies if all enemy ships gets destroyed
                 {
-                    createEnemies();
+                    CreateEnemiesFunc();
                 }
             }
             
@@ -41,7 +40,7 @@ public class CreateEnemies : MonoBehaviour
 
     }
 
-    void createEnemies()
+    void CreateEnemiesFunc()
     {
 
         float x = Random.Range(-12, 20);   //For spawning the enemy ships at random places between the specified range

@@ -3,10 +3,7 @@ using System.Collections;
 
 public class CollisionScript : MonoBehaviour
 {
-    //The below variables are for timer support
-    const float totalRespawnSeconds = 1f;           //Time after which enemy ships will spawn
-
-    float elapsedRespawnSeconds = 0;     //Time elapsed
+    
 
     // Use this for initialization
     void Start()
@@ -16,18 +13,7 @@ public class CollisionScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()                            
-    {
-        //update the timer and check whether it's done
-        elapsedRespawnSeconds += Time.deltaTime;
-        if (elapsedRespawnSeconds >= totalRespawnSeconds)
-        {
-            //Reset the timer 
-            //And spawn enemy ships
-            elapsedRespawnSeconds = 0;
-
-            CreateEnemies();
-            
-        }
+    {        
         
     }
 
