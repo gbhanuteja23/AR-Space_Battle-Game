@@ -1,12 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class CollisionScript : MonoBehaviour
+public class CreateEnemies : MonoBehaviour
 {
     //The below variables are for timer support
-    const float totalRespawnSeconds = 1f;           //Time after which enemy ships will spawn
+    const float totalRespawnSeconds = 5f;           //Time after which enemy ships will spawn
 
     float elapsedRespawnSeconds = 0;     //Time elapsed
+
+    //int enemies = 0;  //No of enemy ships to spawn
 
     // Use this for initialization
     void Start()
@@ -15,7 +18,7 @@ public class CollisionScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()                            
+    void Update()
     {
         //update the timer and check whether it's done
         elapsedRespawnSeconds += Time.deltaTime;
@@ -24,36 +27,28 @@ public class CollisionScript : MonoBehaviour
             //Reset the timer 
             //And spawn enemy ships
             elapsedRespawnSeconds = 0;
-
-            CreateEnemies();
+           
+            
+            if(GameObject.FindGameObjectsWithTag("Player").Length==0)
+            {
+                for(int i=0; i<5; i++)   //To spawn 5 enemies if all enemy ships gets destroyed
+                {
+                    createEnemies();
+                }
+            }
             
         }
-        
+
     }
 
-    //for this to work both need colliders, one must have rigid body (spaceship) the other must have is that "istrigger" should be checked.
-    void OnTriggerEnter(Collider col)
+    void createEnemies()
     {
-        GameObject explosion = Instantiate(Resources.Load("BigExplosion Variant", typeof(GameObject))) as GameObject;
-        explosion.transform.position = transform.position;
-        Destroy(col.gameObject);
-        Destroy(explosion, 3);       
-       
 
-        Destroy(gameObject);
-    }
-
-
-    void CreateEnemies()
-    {
-        
         float x = Random.Range(-12, 20);   //For spawning the enemy ships at random places between the specified range
         float y = Random.Range(6, 8);
         float z = Random.Range(-3, -25);
 
         Instantiate(Resources.Load("enemy1", typeof(GameObject)), new Vector3(x, y, z), Quaternion.identity);
-        
-    }
-    
 
+    }
 }
