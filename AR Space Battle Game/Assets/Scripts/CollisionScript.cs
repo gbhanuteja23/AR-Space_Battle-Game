@@ -44,16 +44,7 @@ public class CollisionScript : MonoBehaviour
     }
 
 
-    void CreateEnemies()
-    {
-        
-        float x = Random.Range(-12, 20);   //For spawning the enemy ships at random places between the specified range
-        float y = Random.Range(6, 8);
-        float z = Random.Range(-3, -25);
-
-        Instantiate(Resources.Load("enemy1", typeof(GameObject)), new Vector3(x, y, z), Quaternion.identity);
-        
-    }
+    
     
 
 }
