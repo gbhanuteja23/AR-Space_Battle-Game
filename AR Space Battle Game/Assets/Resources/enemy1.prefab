@@ -321,8 +321,8 @@ GameObject:
   - component: {fileID: 3826750313736854888}
   - component: {fileID: 3826750313736854889}
   m_Layer: 0
-  m_Name: Wraith Raider Starship Variant
-  m_TagString: Untagged
+  m_Name: enemy1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
