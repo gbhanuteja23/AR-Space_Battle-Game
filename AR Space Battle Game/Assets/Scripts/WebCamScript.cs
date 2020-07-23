@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class webCamScript : MonoBehaviour
+public class WebCamScript : MonoBehaviour
 {
 
     public GameObject webCameraPlane;
