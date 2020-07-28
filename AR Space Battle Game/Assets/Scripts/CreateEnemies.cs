@@ -7,7 +7,7 @@ public class CreateEnemies : MonoBehaviour
     //The below variables are for timer support
     const float totalRespawnSeconds = 5f;           //Time after which enemy ships will spawn
 
-    float elapsedRespawnSeconds = 0;     //Time elapsed
+    float elapsedRespawnSeconds = 0f;     //Time elapsed
 
     
 
@@ -43,9 +43,9 @@ public class CreateEnemies : MonoBehaviour
     void CreateEnemiesFunc()
     {
 
-        float x = Random.Range(-12, 20);   //For spawning the enemy ships at random places between the specified range
-        float y = Random.Range(6, 8);
-        float z = Random.Range(-3, -25);
+        float x = Random.Range(-12f, 20f);   //For spawning the enemy ships at random places between the specified range
+        float y = Random.Range(6f, 8f);
+        float z = Random.Range(-3f, -25f);
 
         Instantiate(Resources.Load("enemy1", typeof(GameObject)), new Vector3(x, y, z), Quaternion.identity);
 
