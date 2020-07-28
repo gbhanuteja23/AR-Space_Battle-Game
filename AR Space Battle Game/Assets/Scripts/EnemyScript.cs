@@ -17,7 +17,7 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(Vector3.forward * 3f * Time.deltaTime);
+        transform.Translate(Vector3.forward * 1f * Time.deltaTime);
     }
 
     IEnumerator Move()
