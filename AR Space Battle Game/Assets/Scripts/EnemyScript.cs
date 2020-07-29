@@ -18,7 +18,9 @@ public class EnemyScript : MonoBehaviour
     {
 
         transform.Translate(Vector3.forward * 1f * Time.deltaTime);
+        
     }
+   
 
     IEnumerator Move()
     {
@@ -27,7 +29,7 @@ public class EnemyScript : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(3.5f);
-            transform.eulerAngles += new Vector3(0, 180f, 0);
+            transform.eulerAngles += new Vector3(0, 180f, 0);            
         }
     }
 }

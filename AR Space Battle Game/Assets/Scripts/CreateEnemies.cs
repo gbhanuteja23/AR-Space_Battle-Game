@@ -47,7 +47,7 @@ public class CreateEnemies : MonoBehaviour
         float y = Random.Range(6f, 8f);
         float z = Random.Range(-3f, -25f);
 
-        Instantiate(Resources.Load("enemy1", typeof(GameObject)), new Vector3(x, y, z), Quaternion.identity);
+        Instantiate(Resources.Load("SF_Free-Fighter Variant", typeof(GameObject)), new Vector3(x, y, z), Quaternion.identity);
 
     }
 }
