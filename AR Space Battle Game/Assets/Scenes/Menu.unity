@@ -577,8 +577,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278838527
-  m_fontColor: {r: 1, g: 0.89411765, b: 0.03529412, a: 1}
+    rgba: 4278779903
+  m_fontColor: {r: 1, g: 1, b: 0.035294116, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -638,9 +638,9 @@ MonoBehaviour:
   m_margin: {x: -71.00998, y: -28.688398, z: -78.90819, w: -39.458633}
   m_textInfo:
     textComponent: {fileID: 657345727}
-    characterCount: 404
+    characterCount: 405
     spriteCount: 0
-    spaceCount: 73
+    spaceCount: 74
     wordCount: 71
     linkCount: 0
     lineCount: 10
