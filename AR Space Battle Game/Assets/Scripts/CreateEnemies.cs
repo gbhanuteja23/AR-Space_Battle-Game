@@ -43,9 +43,9 @@ public class CreateEnemies : MonoBehaviour
     void CreateEnemiesFunc()
     {
 
-        float x = Random.Range(-12f, 20f);   //For spawning the enemy ships at random places between the specified range
-        float y = Random.Range(6f, 8f);
-        float z = Random.Range(-3f, -25f);
+        float x = Random.Range(-28.5f, 32.6f);   //For spawning the enemy ships at random places between the specified range
+        float y = Random.Range(8f, -8f);
+        float z = Random.Range(-17.35f, -6f);
 
         Instantiate(Resources.Load("SF_Free-Fighter Variant", typeof(GameObject)), new Vector3(x, y, z), Quaternion.identity);
 
